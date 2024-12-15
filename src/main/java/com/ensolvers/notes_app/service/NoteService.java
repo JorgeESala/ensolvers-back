@@ -66,16 +66,9 @@ public class NoteService {
         return noteRepository.save(note);
     }
     public Note saveOrUpdate(Note note) {
-        Optional<Note> existingNote = noteRepository.findById(note.getId());
         if(note.getId() == null){
             note.setArchived(false);
             return noteRepository.save(note);
-        }
-        if(existingNote.isPresent()) {
-            existingNote.get().setName(note.getName());
-            existingNote.get().setText(note.getText());
-            return noteRepository.save(existingNote.get());
-
         }
         return noteRepository.save(note);
         
