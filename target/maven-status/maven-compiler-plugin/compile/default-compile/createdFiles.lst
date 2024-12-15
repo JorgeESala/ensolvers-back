@@ -1,0 +1,5 @@
+com\ensolvers\notes_app\NotesAppApplication.class
+com\ensolvers\notes_app\model\Note.class
+com\ensolvers\notes_app\controller\NoteController.class
+com\ensolvers\notes_app\service\NoteService.class
+com\ensolvers\notes_app\repository\NoteRepository.class
